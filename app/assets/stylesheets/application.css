@@ -14,6 +14,8 @@
  *= require_self
  */
 
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+
 * {
   margin: 0;
   padding: 0;
@@ -240,9 +242,6 @@ footer {
   line-height: 120px;
   background-color: #848282;
 }
-.footer-text {
-  color: #fff;
-}
 /*footer*/
 
 /*---show.html.erb---*/
@@ -288,3 +287,75 @@ footer {
   font-size: 10px;
 }
 /*---show.html.erb---*/
+
+@media screen and (max-width: 425px) {
+  header {
+    width: 100%;
+  }
+  .nav-list {
+    width: 100%;
+  }
+  .nav-list-item {
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+  .social {
+    display: none;
+  }
+  .main-visual-content {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    display: block;
+  }
+  .blog {
+    width: 100%;
+    margin: 0;
+  }
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .blog-image {
+    width: 49%;
+  }
+  .blog-text {
+    width: 49%;
+    padding-top: 5px;
+  }
+  .sidebar {
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .instagram-box {
+    width: 48%;
+    padding-top: 48%;
+  }
+  .instagram-box:nth-child(odd) {
+    margin-right: 4%;
+  }
+  .pagination {
+    margin-bottom: 50px;
+  }
+}
+
+/* タブレット横置きサイズ（1024px）以下の際に適用される設定 */
+@media screen and (max-width: 1024px) {
+  .social i {
+    color: green;
+  }
+}
+/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
+@media screen and (max-width: 768px) {
+  .social i {
+    color: red;
+  }
+}
+/* スマートフォンサイズ（425px）以下の際に適用される設定 */
+@media screen and (max-width: 425px) {
+  .social i {
+    color: blue;
+  }
+}
